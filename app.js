@@ -29,7 +29,7 @@ fs.readdir(directory,(e,files)=>{
     (e) ? console.log(e) : console.log(`files in directory asyncrhonous in reverse order ${directory}: `,files.reverse());
 })
 fs.readdir(directory,(e,files)=>{
-    (e) ? console.log(e) : console.log(`files in directory asyncrhonous in reverse order ${directory}: `,files.filter(str=>str.includes('P')));
+    (e) ? console.log(e) : console.log(`files in directory asyncrhonous filtering by the first char ${directory}: `,files.filter(str=>str.includes('P')));
 })
 
 
