@@ -16,7 +16,8 @@ let directory = rl.question('please write a valid directory (for example: "C:/")
     console.log(`you wrote ${dir}`);
     rl.close();
 });*/
-let directory='C:/'
+let directory='D:/'
+let regex = /^[pP]/
 let rootDirSync = fs.readdirSync(directory);
 
 
@@ -29,7 +30,10 @@ fs.readdir(directory,(e,files)=>{
     (e) ? console.log(e) : console.log(`files in directory asyncrhonous in reverse order ${directory}: `,files.reverse());
 })
 fs.readdir(directory,(e,files)=>{
-    (e) ? console.log(e) : console.log(`files in directory asyncrhonous filtering by the first char ${directory}: `,files.filter(str=>str.includes('P')));
+    let len;
+    
+    (e) ? console.log(e) : (len = files.filter(str=>str[0].includes('p')).length
+                            ,console.log(`there are ${len} files in directory asyncrhonous filtering by the first char "p" in "${directory}": `,files.filter(str=>str[0].includes('p'))));
 })
 
 
