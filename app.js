@@ -17,7 +17,7 @@ let directory = rl.question('please write a valid directory (for example: "C:/")
     rl.close();
 });*/
 //when trying to add the methods to a variable I always get an undefined console.log()
-let directory='D:/'
+let directory='D:/';
 let rootDirSync = fs.readdirSync(directory);
 
 
